@@ -22,12 +22,12 @@ Eigen::Matrix4f get_view_matrix(Eigen::Vector3f eye_pos)
 Eigen::Matrix4f get_model_matrix(float rotation_angle)
 {
     Eigen::Matrix4f model = Eigen::Matrix4f::Identity();
-    Eigen::Matrix4f rotate_mat(4,4);
+    Eigen::Matrix4f rotate_mat(4, 4);
     float rot_angle = rotation_angle / 180 * MY_PI;
     rotate_mat << cos(rot_angle), -1 * sin(rot_angle), 0, 0,
-                sin(rot_angle), cos(rot_angle), 0, 0,
-                0, 0, 1, 0,
-                0, 0, 0, 1;
+        sin(rot_angle), cos(rot_angle), 0, 0,
+        0, 0, 1, 0,
+        0, 0, 0, 1;
     model = rotate_mat * model;
     return model;
 }
@@ -38,9 +38,9 @@ Eigen::Matrix4f get_projection_matrix(float eye_fov, float aspect_ratio,
     Eigen::Matrix4f projection = Eigen::Matrix4f::Identity();
     Eigen::Matrix4f pers2ortho = Eigen::Matrix4f::Identity();
     pers2ortho << zNear, 0, 0, 0,
-                0, zNear, 0, 0,
-                0, 0, zNear + zFar, -1 * zNear * zFar,
-                0, 0, 1, 0;
+        0, zNear, 0, 0,
+        0, 0, zNear + zFar, -1 * zNear * zFar,
+        0, 0, 1, 0;
 
     float eye_fov_angle = eye_fov / 360 * MY_PI;
     float t = zNear * tan(eye_fov_angle);
@@ -49,29 +49,31 @@ Eigen::Matrix4f get_projection_matrix(float eye_fov, float aspect_ratio,
     float l = -1 * r;
     Eigen::Matrix4f zoom_mat = Eigen::Matrix4f::Identity();
     zoom_mat << 2 / (r - l), 0, 0, 0,
-            0, 2 / (t - b), 0, 0,
-            0, 0, 2 / (zNear - zFar), 0,
-            0, 0, 0, 1;
+        0, 2 / (t - b), 0, 0,
+        0, 0, 2 / (zNear - zFar), 0,
+        0, 0, 0, 1;
     Eigen::Matrix4f trans_mat = Eigen::Matrix4f::Identity();
-    trans_mat << 1, 0, 0,-1 * (r + l) / 2,
-            0, 1, 0, -1 * (t + b) / 2,
-            0, 0, 1, 0-1 * (zFar + zNear) / 2,
-            0, 0, 0, 1;
+    trans_mat << 1, 0, 0, -1 * (r + l) / 2,
+        0, 1, 0, -1 * (t + b) / 2,
+        0, 0, 1, 0 - 1 * (zFar + zNear) / 2,
+        0, 0, 0, 1;
     Eigen::Matrix4f ortho_mat = zoom_mat * trans_mat;
     projection = ortho_mat * pers2ortho;
     return projection;
 }
 
-int main(int argc, const char** argv)
+int main(int argc, const char **argv)
 {
     float angle = 0;
     bool command_line = false;
     std::string filename = "output.png";
 
-    if (argc >= 3) {
+    if (argc >= 3)
+    {
         command_line = true;
         angle = std::stof(argv[2]); // -r by default
-        if (argc == 4) {
+        if (argc == 4)
+        {
             filename = std::string(argv[3]);
         }
         else
@@ -92,7 +94,8 @@ int main(int argc, const char** argv)
     int key = 0;
     int frame_count = 0;
 
-    if (command_line) {
+    if (command_line)
+    {
         r.clear(rst::Buffers::Color | rst::Buffers::Depth);
 
         r.set_model(get_model_matrix(angle));
@@ -108,7 +111,8 @@ int main(int argc, const char** argv)
         return 0;
     }
 
-    while (key != 27) {
+    while (key != 27)
+    {
         r.clear(rst::Buffers::Color | rst::Buffers::Depth);
 
         r.set_model(get_model_matrix(angle));
@@ -124,10 +128,12 @@ int main(int argc, const char** argv)
 
         std::cout << "frame count: " << frame_count++ << '\n';
 
-        if (key == 'a') {
+        if (key == 'a')
+        {
             angle += 10;
         }
-        else if (key == 'd') {
+        else if (key == 'd')
+        {
             angle -= 10;
         }
     }
