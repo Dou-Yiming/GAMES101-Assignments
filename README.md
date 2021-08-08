@@ -10,8 +10,8 @@
     - ​	Assignment1:
     - ​	Assignment2:
     - ​	Assignment3:
-        - <img src=".\Assignment3\Code\output\phong.png" alt="img3-1" style="zoom:33%;" /><img src=".\Assignment3\Code\output\texture.png" alt="img3-1" style="zoom:33%;" />
-        - <img src=".\Assignment3\Code\output\displacement.png" alt="img3-1" style="zoom:33%;" /><img src=".\Assignment3\Code\output\bump.png" alt="img3-1" style="zoom:33%;" />
+        - <img src=".\Assignment3\Code\output\phong.png" alt="img3-1" style="zoom:3%;" /><img src=".\Assignment3\Code\output\texture.png" alt="img3-1" style="zoom:33%;" />
+        - <img src=".\Assignment3\Code\output\displacement.png" alt="img3-1" style="zoom:3%;" /><img src=".\Assignment3\Code\output\bump.png" alt="img3-1" style="zoom:33%;" />
     - ​	Assignment4:
 
     <img src="Assignment4\code\output\my_bezier_curve.png" style="zoom: 33%;" />
