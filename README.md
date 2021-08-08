@@ -9,33 +9,43 @@
 - The output of each assignment:
     - ​	Assignment1:
 
+        <p align="center">
+        <img src="fig/assignment1.png" width="250"/>
+        </p>
+
     - ​	Assignment2:
 
+      <p align="center">
+      <img src="fig/assignment2.png" width="250"/>
+      </p>
+
     - ​	Assignment3:
-        - <p align="center">
-            <img src=".\Assignment3\Code\output\texture.png" width="300"/>
-            <img src=".\Assignment3\Code\output\phong.png" width="300"/>
-            </p>
-        
-        - <p align="center">
-            <img src=".\Assignment3\Code\output\displacement.png" width="300"/>
-            <img src=".\Assignment3\Code\output\bump.png" width="300"/>
-            </p>
-        
+
+        <p align="center">
+        <img src=".\Assignment3\Code\output\texture.png" width="250"/>
+        </p>
+
     - ​	Assignment4:
 
-    <img src="Assignment4\code\output\my_bezier_curve.png" style="zoom: 33%;" />
+        <p align="center">
+        <img src="Assignment4\code\output\my_bezier_curve.png" width="250"/>
+        </p>
 
     - ​	Assignment5:
 
     <p align="center">
-    <img src="fig/assignment5.png" width="300"/>
+    <img src="fig/assignment5.png" width="250"/>
     </p>
 
     - ​	Assignment6:
 
     <p align="center">
-    <img src="fig/assignment6.png" width="300"/>
+    <img src="fig/assignment6.png" width="250"/>
     </p>
 
     - ​	Assignment7:
+
+        <p align="center">
+        <img src="fig/assignment7.png" width="250"/>
+        </p>
+
