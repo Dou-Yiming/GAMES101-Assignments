@@ -1,6 +1,6 @@
 # GAMES101-Assignments
 
-- For each folder, you may simply run the demo by executing *run_demo.sh*:
+- For each folder, you may simply run the code by executing *run_demo.sh*:
 
     ```
     bash run_demo.sh
